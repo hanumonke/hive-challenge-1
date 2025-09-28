@@ -1,5 +1,7 @@
 # HIVE CHALLENGE: CUSTOM JSON
 
+So, I mainly use hive, every now and then, to share music and explore communities. A couple of months ago, I was invited to parcipate to a introduction to another dimension of hive: Development. More time ago I tried to learn by myself how to interact with hive, but at the moment, I was doing too many things, and my software developer attention was focusing on university projects. I did some little practices reading blocks and posts, but never more than that. It was thanks to the Hive Talk Project that I finally made deeper things and understand a lot more. It has been great and it has sparked my curiosity for web3 in general. 
+
 ## Idea
 
 The idea is to use a simple form structure with a basic react project to enter the challenge and phrase field and then with a button broadcast it in a custom json to the blockchain. Using hive keychain to avoid the handling of the keys in the code.  
@@ -18,15 +20,14 @@ Note: I was taking screenshoots through the process so the img files appear in t
 ### 2. Building the basic structure with react
 ![](Screenshot_2025-09-27_19-06-19.png)
 
+![](Screenshot_2025-09-27_19-13-49.png)
+
 ### 3. Using Keychain
 ![](Screenshot_2025-09-27_19-06-37.png)
 
 Hive Keychain is a powerfull tool that enables us to manage Hive private keys, you can read about the project here. For the purpose of this example, Keychain helps us handling the keys in the device, then, we only need to ask the extension to make the operation, in this case custom json, and it will use the keys saved by the device/browser user. If the person does not have Hive Keychain, we would need to manage the keys directly or with hivesigner, etc. In this example it would only throw a Error indicating that this app needs Hive Keychain
 
-This is the important part, following the [docs of Hive Keychain](https://github.com/hive-keychain/hive-keychain-extension/tree/master/documentation#requestcustomjson) we will need an operation id, the key type that enables us to perform this operation, in this case the Posting key, the json (in this case we got it from the state binded to the form), a message, and then we have a callback with the response of the blockchain. I'm not sure why it is in this way, we could wrap this operations in more classical promises, but it works nicely. We update the state and print the response in the code, below is the form structure:
-
-
-![](Screenshot_2025-09-27_19-13-49.png)
+This is the important part, following the [docs of Hive Keychain](https://github.com/hive-keychain/hive-keychain-extension/tree/master/documentation#requestcustomjson) we will need an operation id, the key type that enables us to perform this operation, in this case the Posting key, the json (in this case we got it from the state binded to the form), a message, and then we have a callback with the response of the blockchain. I'm not sure why it is in this way, we could wrap this operations in more classical promises, but it works nicely. We update the state and print the response in the jsx. 
 
 Then we only need to run the project. 
 
@@ -66,7 +67,7 @@ Here is the message:
 <br>
 
 ![](Screenshot_2025-09-27_20-01-42.png)
-[https://hivehub.dev/tx/2bddc42d0a36c80371eb6076cbd277efd2ac2556](https://hivehub.dev/tx/2bddc42d0a36c80371eb6076cbd277efd2ac2556)
+https://hivehub.dev/tx/2bddc42d0a36c80371eb6076cbd277efd2ac2556
 
 ### For the sake of recursion
 
@@ -74,4 +75,10 @@ Finally, I took screenshots of the making of this post while making it to show h
 
 ![](Screenshot_2025-09-27_20-00-50.png)
 
-And here is the repository
+And here is the repo: https://github.com/hanumonke/hive-challenge-1
+
+
+Thanks for your attention! I'm starting to learn how to develop with hive, and it brings so many ideas to build. I'm part of a great initiative by the Hive Talk Project, here in Venezuela. You can check what we are learning and doing here: 
+
+
+PD: pardon my english I'm not using any translator or AI, just to practice.
